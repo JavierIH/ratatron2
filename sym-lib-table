@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name pandatron2-rescue)(type Legacy)(uri ${KIPRJMOD}/pandatron2-rescue.lib)(options "")(descr ""))
+  (lib (name STM32F446RET6)(type Legacy)(uri ${KIPRJMOD}/STM32F446RET6/STM32F446RET6.lib)(options "")(descr ""))
+  (lib (name ratatron2-rescue)(type Legacy)(uri ${KIPRJMOD}/ratatron2-rescue.lib)(options "")(descr ""))
+)
