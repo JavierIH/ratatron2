@@ -5326,6 +5326,438 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "AO3401A:AO3401A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "AO3401A"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://aosmd.com/sites/default/files/res/data_sheets/AO3401A.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "30V P-channel MOSFET, SOT-23 (G=1, S=2, D=3)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "PMOS P-MOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AO3401A_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 -0.381) (xy 3.683 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AO3401A_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "POWER CONVERTERS"
 		(exclude_from_sim no)
@@ -6334,16 +6766,6 @@
 			(type default)
 		)
 		(uuid "365b9076-489b-4d23-a0bb-cfcd6a60ecef")
-	)
-	(wire
-		(pts
-			(xy 370.84 207.01) (xy 370.84 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "368e26d1-b36b-448d-a86c-71b2e5fb6dda")
 	)
 	(wire
 		(pts
@@ -8615,16 +9037,6 @@
 		)
 		(uuid "1522eae8-5280-43c1-b9b9-f2a6c81aeb91")
 	)
-	(label "MA-"
-		(at 74.93 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "16aa8e6e-6d6f-46b2-8953-0ca8c1edfbe9")
-	)
 	(label "VDD"
 		(at 332.74 240.03 0)
 		(effects
@@ -8714,16 +9126,6 @@
 			(justify right bottom)
 		)
 		(uuid "2a8b6b62-751c-4d81-be60-232d09c34a5c")
-	)
-	(label "MB-"
-		(at 153.67 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2ae3a4dd-d51c-4f87-838c-0c3c065ade75")
 	)
 	(label "VDD"
 		(at 361.95 232.41 0)
@@ -8905,16 +9307,6 @@
 		)
 		(uuid "4ca24e48-63e9-4adb-9974-eb2827b6fdc1")
 	)
-	(label "MB+"
-		(at 153.67 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4fa82011-8598-41d3-b1ae-0cef297c63b0")
-	)
 	(label "VIN"
 		(at 54.61 176.53 0)
 		(effects
@@ -8924,16 +9316,6 @@
 			(justify left bottom)
 		)
 		(uuid "50fdd448-e79f-48c2-9a1f-b00fe19cb6e2")
-	)
-	(label "MA-"
-		(at 74.93 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "539ad468-1346-4810-97d6-e15690c2739a")
 	)
 	(label "PC5"
 		(at 245.11 129.54 90)
@@ -9175,16 +9557,6 @@
 		)
 		(uuid "a0ac980e-d9af-4c84-a010-2b00104ea8b6")
 	)
-	(label "MA+"
-		(at 74.93 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a1127a72-3960-4582-bfe7-60185fc932aa")
-	)
 	(label "PC3"
 		(at 203.2 85.09 0)
 		(effects
@@ -9214,16 +9586,6 @@
 			(justify left bottom)
 		)
 		(uuid "aa1d8335-8947-4bab-985d-92e5190cced2")
-	)
-	(label "MB-"
-		(at 153.67 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ad4d53fd-9463-4372-9a57-9b85351db3fe")
 	)
 	(label "SWCLK"
 		(at 332.74 237.49 0)
@@ -9265,16 +9627,6 @@
 		)
 		(uuid "b546bdf5-4cca-434c-9d85-e62fc37b6072")
 	)
-	(label "MB+"
-		(at 153.67 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b728b024-f414-476e-bba5-8c54006e6190")
-	)
 	(label "VDD"
 		(at 229.87 129.54 90)
 		(effects
@@ -9304,16 +9656,6 @@
 			(justify right bottom)
 		)
 		(uuid "bbe7e1c5-a4a1-44ce-a818-7860f7279e47")
-	)
-	(label "MA+"
-		(at 74.93 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bca75b3f-00bc-4c5e-ac3e-2554b48b70dc")
 	)
 	(label "MA_IN1"
 		(at 284.48 87.63 180)
@@ -16635,70 +16977,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+BATT")
-		(at 370.84 207.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005e388c7f")
-		(property "Reference" "#PWR038"
-			(at 370.84 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 371.221 202.6158 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 370.84 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 370.84 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 370.84 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e45cea95-0816-4586-88a4-6ff01a3dd62d")
-		)
-		(instances
-			(project "ratatron2"
-				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:-BATT")
 		(at 370.84 217.17 180)
 		(unit 1)
@@ -19053,6 +19331,953 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 74.93 48.26) (xy 77.47 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "815de19d-f178-4135-bef2-0c9972a19b09")
+	)
+	(wire
+		(pts
+			(xy 74.93 50.8) (xy 77.47 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc34ea8e-36f4-40af-bc82-22cecbfb9cd3")
+	)
+	(wire
+		(pts
+			(xy 77.47 48.26) (xy 77.47 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f142e27-1d3a-4236-8932-53fa921ca7bb")
+	)
+	(wire
+		(pts
+			(xy 77.47 50.8) (xy 77.47 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9b09a7-c2ea-4771-ab7c-6c5dc1fc1b27")
+	)
+	(junction
+		(at 77.47 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7090c942-e604-4a57-a523-931f0f4019f2")
+	)
+	(wire
+		(pts
+			(xy 77.47 55.88) (xy 88.9 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "082e878a-8fe5-4e3b-83bf-b17706c4d7dd")
+	)
+	(wire
+		(pts
+			(xy 74.93 63.5) (xy 80.01 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d046a5c-f917-4583-ab44-b980aec23ffd")
+	)
+	(wire
+		(pts
+			(xy 74.93 66.04) (xy 80.01 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b17dd4b6-5884-4a40-a3ae-e3b63c3a1f87")
+	)
+	(wire
+		(pts
+			(xy 80.01 63.5) (xy 80.01 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "695512f4-c54e-4ee6-9421-60afd9248933")
+	)
+	(wire
+		(pts
+			(xy 80.01 58.42) (xy 80.01 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9b719be-8b16-40b3-8b01-1d8288bd09b9")
+	)
+	(junction
+		(at 80.01 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5ef1c26-1342-4591-a9ff-0d417d13e47d")
+	)
+	(wire
+		(pts
+			(xy 80.01 58.42) (xy 88.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27de0275-516d-469f-b46a-470c5fc4d993")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 93.98 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c4ad52dd-04e7-4aef-8288-6f7d86a1d36e")
+		(property "Reference" "J2"
+			(at 96.52 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor A"
+			(at 96.52 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 93.98 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3751caa-e1f7-49d5-82c9-cb6435fabde3")
+		)
+		(pin "2"
+			(uuid "f757fb0e-1a85-418c-b050-9d7f6ad817f9")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 153.67 48.26) (xy 156.21 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f95be4e-63ab-4bde-be67-9e7441235dfb")
+	)
+	(wire
+		(pts
+			(xy 153.67 50.8) (xy 156.21 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e3c7516-f4e5-47d9-b373-f7e21c0aceb6")
+	)
+	(wire
+		(pts
+			(xy 156.21 48.26) (xy 156.21 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6e77a65-3493-4ee9-8965-0407054d2960")
+	)
+	(wire
+		(pts
+			(xy 156.21 50.8) (xy 156.21 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaad8fa3-0e7c-4f66-8b58-f197f1c71fa2")
+	)
+	(junction
+		(at 156.21 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffdb6d09-9ecd-401d-af7f-309f8411ac68")
+	)
+	(wire
+		(pts
+			(xy 156.21 55.88) (xy 167.64 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5258c4ee-8387-4cdc-8333-69371937e013")
+	)
+	(wire
+		(pts
+			(xy 153.67 63.5) (xy 158.75 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b498c0f2-9715-4cbc-98f9-6180787858e7")
+	)
+	(wire
+		(pts
+			(xy 153.67 66.04) (xy 158.75 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bb7aa86-dc50-46e3-8ab3-a57af310f281")
+	)
+	(wire
+		(pts
+			(xy 158.75 63.5) (xy 158.75 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "478998cf-380b-4624-b3ca-15b5653e0360")
+	)
+	(wire
+		(pts
+			(xy 158.75 58.42) (xy 158.75 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f623d740-c1fc-4d09-903d-af8f53fb795e")
+	)
+	(junction
+		(at 158.75 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8cb6eb23-22b6-4267-9138-1cb9ea117e70")
+	)
+	(wire
+		(pts
+			(xy 158.75 58.42) (xy 167.64 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a19440ac-7253-488f-97b1-0e472e2ed8b6")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 172.72 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80d07de5-e3bd-48eb-b677-81ebd108d499")
+		(property "Reference" "J3"
+			(at 175.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor B"
+			(at 175.26 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 172.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c82cc5c5-4d9d-465e-9a2d-d69662f47e56")
+		)
+		(pin "2"
+			(uuid "3bfd0802-c6ab-43de-b36a-9bf84828cb9e")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 289.56 209.55) (xy 304.8 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e578935e-f4d4-4933-9cf1-7961027b89a5")
+	)
+	(wire
+		(pts
+			(xy 304.8 209.55) (xy 325.12 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b11ffeaf-4330-4d21-90a8-1f9e94cafdfc")
+	)
+	(wire
+		(pts
+			(xy 325.12 209.55) (xy 370.84 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15dcfbd2-e01e-495c-83c7-45339f819a00")
+	)
+	(junction
+		(at 325.12 209.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a693d75-b8f1-4033-8c24-219cf11a83f9")
+	)
+	(junction
+		(at 304.8 209.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94de89e2-d30a-49c2-aec6-a5a3664ea73b")
+	)
+	(symbol
+		(lib_id "AO3401A:AO3401A")
+		(at 322.58 214.63 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "48089eb5-9d97-4a9e-abf1-36751ecf5cf2")
+		(property "Reference" "Q9"
+			(at 327 207.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3401A"
+			(at 331 207.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 322.58 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 322.58 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 322.58 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "861c3077-e623-472c-8b12-bd88ca17efac")
+		)
+		(pin "2"
+			(uuid "35cf51f9-a511-4d94-94e1-5fa75731ff59")
+		)
+		(pin "3"
+			(uuid "f6363e7b-79c0-4918-9353-46f12dab4ae2")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 289.56 213.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "321538ce-c608-438e-9ef6-a775b3595336")
+		(property "Reference" "R27"
+			(at 292.481 212.1916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 292.481 214.503 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 289.56 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 289.56 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "926449e2-562f-40fa-b7ed-8bbf6e648d8d")
+		)
+		(pin "2"
+			(uuid "286fb420-d21a-49e7-b42f-52403415056b")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 304.8 213.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3d8287e2-996b-4d2c-8a89-159c689e973a")
+		(property "Reference" "C29"
+			(at 307.721 212.1916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 307.721 214.503 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 304.8 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 304.8 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 304.8 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07de7933-56aa-409b-9d01-0eb3e57fa732")
+		)
+		(pin "2"
+			(uuid "e1f335d6-cbd6-4284-a886-00a0900e83fe")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 289.56 217.17) (xy 304.8 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "598dc5f4-3803-46ad-a3e7-875340e67223")
+	)
+	(wire
+		(pts
+			(xy 304.8 217.17) (xy 317.5 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74bb17f9-f30d-4ca9-b054-4bbc3c8f49a2")
+	)
+	(wire
+		(pts
+			(xy 317.5 214.63) (xy 317.5 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ce12722-c71b-4794-97d6-0036cb67df95")
+	)
+	(junction
+		(at 304.8 217.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de429946-bafc-404f-86f2-61aefdd7bc90")
+	)
+	(junction
+		(at 317.5 217.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c736103f-e885-4936-8fe0-62c5de7a2f73")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 317.5 220.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "76822d6e-80cd-4dec-9c76-d736da8ab29a")
+		(property "Reference" "R28"
+			(at 314.579 219.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "68K"
+			(at 314.579 222.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 317.5 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 317.5 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 317.5 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "64f59f36-831b-43e8-b17b-5aafcbffb56b")
+		)
+		(pin "2"
+			(uuid "955539ad-7bc1-4b6d-8fb8-7502aa4a893e")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 325.12 219.71) (xy 330.2 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5b25558-8236-48d6-bd9d-df57f00e7489")
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 330.2 219.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "070d8eb1-73fb-4573-987c-771c2ae059bd")
+		(property "Reference" "#PWR077"
+			(at 330.2 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 330.2 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.2 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.2 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 330.2 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7f403c29-5f38-488c-8615-b03500eb09a1")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "#PWR077")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 327.66 224.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "15618ec7-fd03-446c-82b2-09e3256544ee")
+		(property "Reference" "J6"
+			(at 330.2 223.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Switch"
+			(at 330.2 226.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 327.66 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 327.66 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 327.66 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4ef6a056-835d-42da-9dbe-e9a099a4f2fd")
+		)
+		(pin "2"
+			(uuid "b2a0bb26-649c-4424-9d39-289d7c0cd029")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 317.5 224.79) (xy 322.58 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc24e502-7a8d-4eb0-b3be-ac0acc0d9acd")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 322.58 227.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45268da2-2c19-438a-a9b3-0e7f2a65c3c7")
+		(property "Reference" "#PWR078"
+			(at 322.58 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 322.58 231.7742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 322.58 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 322.58 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 322.58 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d8b6e855-3799-4f02-b22b-00a6063ef2c7")
+		)
+		(instances
+			(project "ratatron2"
+				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
+					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "P-MOSFET load switch"
+		(exclude_from_sim no)
+		(at 289.56 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a1198a2-d0e7-49aa-9389-b21da7c5909b")
 	)
 	(sheet_instances
 		(path "/"
