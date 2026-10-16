@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MP6551GQB
+D 14V 5A H-bridge brushed DC motor driver, QFN-14 2.5x3mm
+K motor driver h-bridge mps
+F https://www.mouser.com/pdfDocs/MP6551GQB.pdf
+$ENDCMP
+#
+#End Doc Library
