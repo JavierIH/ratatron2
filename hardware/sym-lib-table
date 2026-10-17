@@ -6,4 +6,5 @@
   (lib (name LSM6DSRX)(type KiCad)(uri ${KIPRJMOD}/LSM6DSRX.kicad_sym)(options "")(descr "ST LSM6DSRX IMU"))
   (lib (name MP6551)(type KiCad)(uri ${KIPRJMOD}/MP6551.kicad_sym)(options "")(descr "MPS MP6551 H-bridge"))
   (lib (name MCP1755S)(type KiCad)(uri ${KIPRJMOD}/MCP1755S.kicad_sym)(options "")(descr "Microchip MCP1755S LDO SOT-223"))
+  (lib (name IR_PAIR)(type KiCad)(uri ${KIPRJMOD}/IR_PAIR.kicad_sym)(options "")(descr "IR emitter + phototransistor pair, 1x04"))
 )
