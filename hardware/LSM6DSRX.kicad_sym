@@ -173,7 +173,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -16.51 1.27 0)
 				(length 5.08)
 				(name "SDx"
@@ -191,7 +191,7 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin passive line
 				(at -16.51 -1.27 0)
 				(length 5.08)
 				(name "SCx"

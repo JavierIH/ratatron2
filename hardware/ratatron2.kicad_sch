@@ -1141,7 +1141,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -16.51 1.27 0)
 					(length 5.08)
 					(name "SDx"
@@ -1159,7 +1159,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin passive line
 					(at -16.51 -1.27 0)
 					(length 5.08)
 					(name "SCx"
@@ -6419,13 +6419,25 @@
 		(at 250.19 181.61)
 		(uuid "13c4b511-868c-45af-994e-d3e90207a413")
 	)
-	(no_connect
-		(at 217.17 186.69)
-		(uuid "309b593f-f3e5-4118-9d12-de74138ee516")
+	(label "GND"
+		(at 217.17 186.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4bfad92b-33b7-4e70-bc28-da51204fbc70")
 	)
-	(no_connect
-		(at 217.17 184.15)
-		(uuid "4d5c99a0-46b2-4709-a5f9-3529b2307e97")
+	(label "GND"
+		(at 217.17 184.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "422364b7-10d0-4112-8854-2c1a123df54f")
 	)
 	(no_connect
 		(at 250.19 184.15)
