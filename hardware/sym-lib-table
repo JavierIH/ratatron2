@@ -2,6 +2,7 @@
   (lib (name pandatron2-rescue)(type Legacy)(uri ${KIPRJMOD}/pandatron2-rescue.lib)(options "")(descr ""))
   (lib (name STM32F446RET6)(type Legacy)(uri ${KIPRJMOD}/STM32F446RET6/STM32F446RET6.lib)(options "")(descr ""))
   (lib (name ratatron2-rescue)(type Legacy)(uri ${KIPRJMOD}/ratatron2-rescue.lib)(options "")(descr ""))
+  (lib (name AO3400A)(type KiCad)(uri ${KIPRJMOD}/AO3400A.kicad_sym)(options "")(descr "AOS AO3400A N-MOSFET SOT-23"))
   (lib (name AO3401A)(type KiCad)(uri ${KIPRJMOD}/AO3401A.kicad_sym)(options "")(descr "AOS AO3401A P-MOSFET SOT-23"))
   (lib (name LSM6DSRX)(type KiCad)(uri ${KIPRJMOD}/LSM6DSRX.kicad_sym)(options "")(descr "ST LSM6DSRX IMU"))
   (lib (name MP6551)(type Legacy)(uri ${KIPRJMOD}/MP6551.lib)(options "")(descr "MPS MP6551 H-bridge"))
