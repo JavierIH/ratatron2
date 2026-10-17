@@ -5,7 +5,17 @@
 #include <libopencm3/stm32/rcc.h>
 
 
-#define VREF_MV     3300
+#define VREF_MV             3300
+#define CUR_ZERO_SAMPLES    64
+#define CUR_FULL_SCALE_MA   (VREF_MV * MOTOR_CUR_RATIO / MOTOR_CUR_R_OHM)
+
+static uint16_t ma_cur_zero, mb_cur_zero;
+
+static uint16_t analog_average(uint8_t channel, unsigned samples) {
+    uint32_t sum = 0;
+    for (unsigned i = 0; i < samples; i++) sum += analog_read(channel);
+    return sum / samples;
+}
 
 void analog_setup(void) {
     rcc_periph_clock_enable(RCC_ADC1);
@@ -24,6 +34,12 @@ void analog_setup(void) {
     adc_set_sample_time_on_all_channels(ADC1, ADC_SMPR_SMP_56CYC);
     adc_power_on(ADC1);
     delay_us(10);
+
+    // Motor current zero (~VDD/2). Drivers are still disabled by their EN
+    // pull-downs; wait for the RC filter (235us) to settle first
+    delay_ms(2);
+    ma_cur_zero = analog_average(MA_CUR_CHANNEL, CUR_ZERO_SAMPLES);
+    mb_cur_zero = analog_average(MB_CUR_CHANNEL, CUR_ZERO_SAMPLES);
 }
 
 uint16_t analog_read(uint8_t channel) {
@@ -37,4 +53,18 @@ uint16_t battery_mv(void) {
     uint32_t raw = analog_read(BATT_CHANNEL);
     uint32_t pin_mv = raw * VREF_MV / 4095;
     return pin_mv * (BATT_R_TOP + BATT_R_BOTTOM) / BATT_R_BOTTOM;
+}
+
+static uint16_t current_ma(uint8_t channel, uint16_t zero) {
+    int32_t raw = analog_read(channel) - zero;
+    if (raw < 0) return 0;
+    return raw * CUR_FULL_SCALE_MA / 4095;  // ~3.4mA per step
+}
+
+uint16_t motor_a_ma(void) {
+    return current_ma(MA_CUR_CHANNEL, ma_cur_zero);
+}
+
+uint16_t motor_b_ma(void) {
+    return current_ma(MB_CUR_CHANNEL, mb_cur_zero);
 }

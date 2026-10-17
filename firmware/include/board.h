@@ -92,6 +92,8 @@ struct pin {
 #define MOTOR_CUR_PINS      (GPIO6 | GPIO7)
 #define MA_CUR_CHANNEL      ADC_CHANNEL6
 #define MB_CUR_CHANNEL      ADC_CHANNEL7
+#define MOTOR_CUR_RATIO     10000   // low side current / CM current
+#define MOTOR_CUR_R_OHM     2350    // 4K7 || 4K7
 
 // Suction fan: Q10 driven by TIM1_CH4
 #define FAN_PORT            GPIOA
