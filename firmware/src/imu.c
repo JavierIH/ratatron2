@@ -6,12 +6,18 @@
 #include <libopencm3/stm32/spi.h>
 
 
-#define REG_GYRO_CONFIG     0x1B
-#define REG_GYRO_ZOUT_H     0x47
-#define REG_USER_CTRL       0x6A
-#define REG_PWR_MGMT_1      0x6B
-#define REG_WHO_AM_I        0x75
+#define REG_INT1_CTRL       0x0D
+#define REG_WHO_AM_I        0x0F
+#define REG_CTRL1_XL        0x10
+#define REG_CTRL2_G         0x11
+#define REG_CTRL3_C         0x12
+#define REG_CTRL4_C         0x13
+#define REG_CTRL9_XL        0x18
+#define REG_OUTZ_L_G        0x26
 #define READ_FLAG           0x80
+
+#define CTRL3_C_SW_RESET    0x01
+#define RESET_TIMEOUT_MS    10
 
 static void cs_low(void) {
     gpio_clear(IMU_CS_PORT, IMU_CS_PIN);
@@ -46,8 +52,8 @@ bool imu_setup(void) {
     gpio_mode_setup(IMU_SPI_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, IMU_SPI_PINS);
     gpio_set_af(IMU_SPI_PORT, GPIO_AF5, IMU_SPI_PINS);
 
-    // Registers need SPI <= 1MHz: 45MHz / 64 = 703kHz. Mode 3.
-    spi_init_master(SPI2, SPI_CR1_BAUDRATE_FPCLK_DIV_64,
+    // Up to 10MHz: 45MHz / 8 = 5.6MHz. Mode 3.
+    spi_init_master(SPI2, SPI_CR1_BAUDRATE_FPCLK_DIV_8,
                     SPI_CR1_CPOL_CLK_TO_1_WHEN_IDLE,
                     SPI_CR1_CPHA_CLK_TRANSITION_2,
                     SPI_CR1_DFF_8BIT, SPI_CR1_MSBFIRST);
@@ -55,15 +61,18 @@ bool imu_setup(void) {
     spi_set_nss_high(SPI2);
     spi_enable(SPI2);
 
-    write_reg(REG_PWR_MGMT_1, 0x80);    // reset
-    delay_ms(100);
-    write_reg(REG_PWR_MGMT_1, 0x01);    // PLL clock
-    write_reg(REG_USER_CTRL, 0x10);     // disable I2C, SPI only
-    write_reg(REG_GYRO_CONFIG, 0x18);   // +-2000 dps
-    delay_ms(10);
+    write_reg(REG_CTRL3_C, CTRL3_C_SW_RESET);
+    uint32_t start = millis();
+    while ((read_reg(REG_CTRL3_C) & CTRL3_C_SW_RESET) && millis() - start < RESET_TIMEOUT_MS);
 
-    uint8_t id = imu_who_am_i();
-    return id == MPU9250_WHO_AM_I_VALUE || id == MPU9255_WHO_AM_I_VALUE;
+    write_reg(REG_CTRL3_C, 0x44);       // block data update, register auto increment
+    write_reg(REG_CTRL4_C, 0x04);       // disable I2C, SPI only
+    write_reg(REG_CTRL9_XL, 0xE2);      // disable I3C, keep DEN defaults
+    write_reg(REG_CTRL1_XL, 0x40);      // accelerometer 104Hz, +-2g
+    write_reg(REG_CTRL2_G, 0x81);       // gyro 1666Hz, +-4000 dps
+    write_reg(REG_INT1_CTRL, 0x02);     // gyro data ready on INT1
+
+    return imu_who_am_i() == LSM6DSRX_WHO_AM_I_VALUE;
 }
 
 uint8_t imu_who_am_i(void) {
@@ -72,9 +81,9 @@ uint8_t imu_who_am_i(void) {
 
 int16_t imu_gyro_z(void) {
     cs_low();
-    spi_xfer(SPI2, REG_GYRO_ZOUT_H | READ_FLAG);
-    uint8_t high = spi_xfer(SPI2, 0x00);
+    spi_xfer(SPI2, REG_OUTZ_L_G | READ_FLAG);
     uint8_t low = spi_xfer(SPI2, 0x00);
+    uint8_t high = spi_xfer(SPI2, 0x00);
     cs_high();
     return (int16_t)((high << 8) | low);
 }

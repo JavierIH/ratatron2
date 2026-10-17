@@ -29,14 +29,15 @@ static void motor_test(void) {
     printf("\n-- motor test --\n");
     motors_enable(true);
     for (unsigned i = 0; i < sizeof(steps) / sizeof(steps[0]); i++) {
-        int16_t start_a = encoder_a();
-        int16_t start_b = encoder_b();
+        int32_t start_a = encoder_a();
+        int32_t start_b = encoder_b();
         motors_set(steps[i].a, steps[i].b);
         delay_ms(MOTOR_TEST_MS);
         motors_set(0, 0);
         delay_ms(200);
-        printf("%s: enc_a %+6d  enc_b %+6d\n", steps[i].name,
-               (int16_t)(encoder_a() - start_a), (int16_t)(encoder_b() - start_b));
+        printf("%s: enc_a %+7ld  enc_b %+7ld  fault %d %d\n", steps[i].name,
+               (long)(encoder_a() - start_a), (long)(encoder_b() - start_b),
+               motor_fault_a(), motor_fault_b());
     }
     motors_enable(false);
     printf("-- end --\n\n");
@@ -79,11 +80,13 @@ int main(void) {
         if (millis() - last_print >= PRINT_PERIOD_MS) {
             last_print = millis();
             sensors_read(ir);
-            printf("bat %5u mV | ir SL %4d SR %4d FL %4d FR %4d | enc %6d %6d | gz %6d | int %d\n",
+            int16_t gz = imu_gyro_z();
+            printf("bat %5u mV | ir SL %4d SR %4d FL %4d FR %4d | enc %7ld %7ld | gz %6d (%5ld dps) int %d\n",
                    battery_mv(),
                    ir[IR_SIDE_LEFT].value, ir[IR_SIDE_RIGHT].value,
                    ir[IR_FRONT_LEFT].value, ir[IR_FRONT_RIGHT].value,
-                   encoder_a(), encoder_b(), imu_gyro_z(), imu_int());
+                   (long)encoder_a(), (long)encoder_b(),
+                   gz, (long)gz * IMU_GYRO_MDPS_PER_LSB / 1000, imu_int());
 
             led_set(0, (millis() / 500) % 2);  // heartbeat
         }

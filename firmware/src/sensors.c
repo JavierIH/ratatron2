@@ -8,30 +8,29 @@
 #define EMITTER_SETTLE_US   40
 
 struct ir_channel {
-    uint32_t emitter_port;
-    uint16_t emitter_pin;
+    struct pin emitter;
     uint8_t adc_channel;
 };
 
 static const struct ir_channel channels[NUM_IR_SENSORS] = {
-    [IR_SIDE_LEFT]   = {GPIOC, GPIO4, ADC_CHANNEL10},  // E_IR_SL / R_IR_SL
-    [IR_SIDE_RIGHT]  = {GPIOC, GPIO5, ADC_CHANNEL11},  // E_IR_SR / R_IR_SR
-    [IR_FRONT_LEFT]  = {GPIOB, GPIO0, ADC_CHANNEL12},  // E_IR_FL / R_IR_FL
-    [IR_FRONT_RIGHT] = {GPIOB, GPIO1, ADC_CHANNEL13},  // E_IR_FR / R_IR_FR
+    [IR_SIDE_LEFT]   = {E_IR_SL, R_IR_SL_CHANNEL},
+    [IR_SIDE_RIGHT]  = {E_IR_SR, R_IR_SR_CHANNEL},
+    [IR_FRONT_LEFT]  = {E_IR_FL, R_IR_FL_CHANNEL},
+    [IR_FRONT_RIGHT] = {E_IR_FR, R_IR_FR_CHANNEL},
 };
 
 void sensors_setup(void) {
     for (int i = 0; i < NUM_IR_SENSORS; i++) {
-        gpio_mode_setup(channels[i].emitter_port, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE,
-                        channels[i].emitter_pin);
-        gpio_clear(channels[i].emitter_port, channels[i].emitter_pin);
+        gpio_mode_setup(channels[i].emitter.port, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE,
+                        channels[i].emitter.pin);
+        gpio_clear(channels[i].emitter.port, channels[i].emitter.pin);
     }
 }
 
 void emitter_set(enum ir_sensor sensor, int on) {
-    const struct ir_channel *ch = &channels[sensor];
-    if (on) gpio_set(ch->emitter_port, ch->emitter_pin);
-    else gpio_clear(ch->emitter_port, ch->emitter_pin);
+    const struct pin *e = &channels[sensor].emitter;
+    if (on) gpio_set(e->port, e->pin);
+    else gpio_clear(e->port, e->pin);
 }
 
 // One sensor at a time so neighbours don't light each other

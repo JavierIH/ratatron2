@@ -4,10 +4,10 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define MPU9250_WHO_AM_I_VALUE  0x71
-#define MPU9255_WHO_AM_I_VALUE  0x73
+#define LSM6DSRX_WHO_AM_I_VALUE 0x6B
+#define IMU_GYRO_MDPS_PER_LSB   140     // +-4000 dps full scale
 
-// MPU-9250 on SPI2, gyro at +-2000 dps (16.4 LSB/dps)
+// LSM6DSRX on SPI2, gyro at 1666Hz and +-4000 dps. INT1 flags gyro data ready.
 bool imu_setup(void);
 uint8_t imu_who_am_i(void);
 int16_t imu_gyro_z(void);

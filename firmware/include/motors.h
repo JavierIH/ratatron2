@@ -6,9 +6,12 @@
 
 #define MOTOR_MAX   1000
 
-// TB6612FNG, PWM on TIM1 at 20kHz. Speed range -MOTOR_MAX..MOTOR_MAX
+// Two MP6551 H-bridges, PWM on TIM8 at 20kHz. Speed range -MOTOR_MAX..MOTOR_MAX,
+// 0 brakes. Outputs are high impedance while disabled.
 void motors_setup(void);
 void motors_enable(bool enable);
 void motors_set(int16_t speed_a, int16_t speed_b);
+bool motor_fault_a(void);
+bool motor_fault_b(void);
 
 #endif

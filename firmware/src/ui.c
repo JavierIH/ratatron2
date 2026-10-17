@@ -2,19 +2,7 @@
 #include <board.h>
 
 
-struct pin {
-    uint32_t port;
-    uint16_t pin;
-};
-
-static const struct pin leds[NUM_LEDS] = {
-    {GPIOC, GPIO10},  // LED1
-    {GPIOC, GPIO11},  // LED2
-    {GPIOC, GPIO12},  // LED3
-    {GPIOD, GPIO2},   // LED4
-    {GPIOB, GPIO8},   // LED5
-    {GPIOB, GPIO9},   // LED6
-};
+static const struct pin leds[NUM_LEDS] = LED_PINS;
 
 void ui_setup(void) {
     for (int i = 0; i < NUM_LEDS; i++) {

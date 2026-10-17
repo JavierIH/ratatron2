@@ -5,49 +5,56 @@
 #include <libopencm3/stm32/adc.h>
 
 // Ratatron II pinout (STM32F446RET6, LQFP64)
-// Net names match hardware/ratatron2.kicad_sch
+// Net names match hardware/ratatron2.kicad_sch. Pin = LQFP64 package pin.
 //
-//  PA0   IMU_INT       in   (EXTI0)
-//  PA2   TX2           USART2_TX AF7 -> J5
-//  PA3   RX2           USART2_RX AF7 -> J5
-//  PA4   BATT_ADC      ADC12_IN4
-//  PA8   MA_PWM        TIM1_CH1 AF1
-//  PA9   MB_PWM        TIM1_CH2 AF1
-//  PA13  SWDIO         J4
-//  PA14  SWCLK         J4
-//  PB0   E_IR_FL       out
-//  PB1   E_IR_FR       out
-//  PB3   SWO
-//  PB4   MA_CHA        TIM3_CH1 AF2 (FT, encoder at 5V)
-//  PB5   MA_CHB        TIM3_CH2 AF2 (FT)
-//  PB6   MB_CHA        TIM4_CH1 AF2 (FT)
-//  PB7   MB_CHB        TIM4_CH2 AF2 (FT)
-//  PB8   LED5          out
-//  PB9   LED6          out
-//  PB10  M_STBY        out
-//  PB12  IMU_CS        out
-//  PB13  IMU_SCLK      SPI2_SCK AF5
-//  PB14  IMU_MISO      SPI2_MISO AF5
-//  PB15  IMU_MOSI      SPI2_MOSI AF5
-//  PC0   R_IR_SL       ADC123_IN10
-//  PC1   R_IR_SR       ADC123_IN11
-//  PC2   R_IR_FL       ADC123_IN12
-//  PC3   R_IR_FR       ADC123_IN13
-//  PC4   E_IR_SL       out
-//  PC5   E_IR_SR       out
-//  PC6   MA_IN1        out
-//  PC7   MA_IN2        out
-//  PC8   MB_IN1        out
-//  PC9   MB_IN2        out
-//  PC10  LED1          out
-//  PC11  LED2          out
-//  PC12  LED3          out
-//  PC13  BUTTON        in, external 4K7 pull-up, active low
-//  PD2   LED4          out
-//  PH0   OSC_IN        8MHz HSE
-//  PH1   OSC_OUT
+//  Pin  Port  Net        Function
+//   2   PC13  BUTTON     in, external 4K7 pull-up, active low
+//   5   PH0   OSC_IN     8MHz HSE
+//   6   PH1   OSC_OUT
+//   8   PC0   R_IR_SL    ADC123_IN10
+//   9   PC1   R_IR_SR    ADC123_IN11
+//  10   PC2   R_IR_FL    ADC123_IN12
+//  11   PC3   R_IR_FR    ADC123_IN13
+//  14   PA0   ENCA_CHA   TIM5_CH1 AF2 (32 bit timer)
+//  15   PA1   ENCA_CHB   TIM5_CH2 AF2
+//  16   PA2   TX2        USART2_TX AF7 -> J5
+//  17   PA3   RX2        USART2_RX AF7 -> J5
+//  20   PA4   BATT_ADC   ADC12_IN4
+//  24   PC4   E_IR_SL    out
+//  25   PC5   E_IR_SR    out
+//  26   PB0   E_IR_FL    out
+//  27   PB1   E_IR_FR    out
+//  29   PB10  IMU_INT    in (EXTI10), LSM6DSRX INT1
+//  33   PB12  IMU_CS     out
+//  34   PB13  IMU_SCK    SPI2_SCK AF5
+//  35   PB14  IMU_MISO   SPI2_MISO AF5
+//  36   PB15  IMU_MOSI   SPI2_MOSI AF5
+//  37   PC6   MA_IN1     TIM8_CH1 AF3
+//  38   PC7   MA_IN2     TIM8_CH2 AF3
+//  39   PC8   MB_IN1     TIM8_CH3 AF3
+//  40   PC9   MB_IN2     TIM8_CH4 AF3
+//  41   PA8   M_EN       out, EN1+EN2 of both MP6551
+//  42   PA9   MA_FAULT   in, nFAULT of U5
+//  43   PA10  MB_FAULT   in, nFAULT of U1
+//  44   PA11  FAN_PWM    TIM1_CH4 AF1
+//  46   PA13  SWDIO      J4
+//  49   PA14  SWCLK      J4
+//  50   PA15  LED1       out
+//  51   PC10  LED2       out
+//  52   PC11  LED3       out
+//  53   PC12  LED4       out
+//  54   PD2   LED5       out
+//  56   PB4   LED6       out
+//  61   PB8   ENCB_CHA   TIM2_CH1 AF1 (32 bit timer)
+//  62   PB9   ENCB_CHB   TIM2_CH2 AF1
 //
-//  Free: PA1, PA5, PA6, PA7, PA10, PA11, PA12, PA15, PB2
+//  Not connected: PC14, PC15, PA5, PA6, PA7, PA12, PB2, PB3 (SWO), PB5, PB6, PB7
+//  Reserved: PA6/PA7 motor current (ADC12_IN6/7), PB5 buzzer (TIM3_CH2)
+
+struct pin {
+    uint32_t port;
+    uint16_t pin;
+};
 
 // Serial
 #define SERIAL_PORT         GPIOA
@@ -57,6 +64,8 @@
 #define BUTTON_PORT         GPIOC
 #define BUTTON_PIN          GPIO13
 #define NUM_LEDS            6
+#define LED_PINS            {{GPIOA, GPIO15}, {GPIOC, GPIO10}, {GPIOC, GPIO11}, \
+                             {GPIOC, GPIO12}, {GPIOD, GPIO2}, {GPIOB, GPIO4}}
 
 // Battery: R24 47K / R25 27K
 #define BATT_PORT           GPIOA
@@ -65,32 +74,45 @@
 #define BATT_R_TOP          47
 #define BATT_R_BOTTOM       27
 
-// Motor driver TB6612FNG
-#define MOTOR_PWM_PORT      GPIOA
-#define MOTOR_PWM_PINS      (GPIO8 | GPIO9)
-#define MOTOR_DIR_PORT      GPIOC
-#define MA_IN1_PIN          GPIO6
-#define MA_IN2_PIN          GPIO7
-#define MB_IN1_PIN          GPIO8
-#define MB_IN2_PIN          GPIO9
-#define MOTOR_STBY_PORT     GPIOB
-#define MOTOR_STBY_PIN      GPIO10
+// Motor drivers: 2x MP6551, PWM on IN1/IN2
+#define MOTOR_PWM_PORT      GPIOC
+#define MOTOR_PWM_PINS      (GPIO6 | GPIO7 | GPIO8 | GPIO9)
+#define MOTOR_EN_PORT       GPIOA
+#define MOTOR_EN_PIN        GPIO8
+#define MOTOR_FAULT_PORT    GPIOA
+#define MA_FAULT_PIN        GPIO9
+#define MB_FAULT_PIN        GPIO10
 #define MOTOR_PWM_FREQ      20000
 
-// Encoders
-#define ENCODER_PORT        GPIOB
-#define ENCODER_PINS        (GPIO4 | GPIO5 | GPIO6 | GPIO7)
+// Suction fan: Q10 driven by TIM1_CH4
+#define FAN_PORT            GPIOA
+#define FAN_PIN             GPIO11
+#define FAN_PWM_FREQ        20000
 
-// IMU MPU-9250 on SPI2
+// Encoders: A on TIM5, B on TIM2
+#define ENCA_PORT           GPIOA
+#define ENCA_PINS           (GPIO0 | GPIO1)
+#define ENCB_PORT           GPIOB
+#define ENCB_PINS           (GPIO8 | GPIO9)
+
+// IMU LSM6DSRX on SPI2
 #define IMU_SPI_PORT        GPIOB
 #define IMU_SPI_PINS        (GPIO13 | GPIO14 | GPIO15)
 #define IMU_CS_PORT         GPIOB
 #define IMU_CS_PIN          GPIO12
-#define IMU_INT_PORT        GPIOA
-#define IMU_INT_PIN         GPIO0
+#define IMU_INT_PORT        GPIOB
+#define IMU_INT_PIN         GPIO10
 
-// Infrared sensors
+// Infrared sensors: emitters through Q5..Q8, receivers on ADC
 #define IR_RX_PORT          GPIOC
 #define IR_RX_PINS          (GPIO0 | GPIO1 | GPIO2 | GPIO3)
+#define E_IR_SL             {GPIOC, GPIO4}
+#define E_IR_SR             {GPIOC, GPIO5}
+#define E_IR_FL             {GPIOB, GPIO0}
+#define E_IR_FR             {GPIOB, GPIO1}
+#define R_IR_SL_CHANNEL     ADC_CHANNEL10
+#define R_IR_SR_CHANNEL     ADC_CHANNEL11
+#define R_IR_FL_CHANNEL     ADC_CHANNEL12
+#define R_IR_FR_CHANNEL     ADC_CHANNEL13
 
 #endif
