@@ -2,6 +2,7 @@
 #include <board.h>
 #include <clock.h>
 #include <encoders.h>
+#include <fan.h>
 #include <imu.h>
 #include <motors.h>
 #include <sensors.h>
@@ -12,9 +13,12 @@
 #define PRINT_PERIOD_MS     100
 #define MOTOR_TEST_SPEED    300     // 30%
 #define MOTOR_TEST_MS       500
+#define FAN_TEST_SPEED      300     // 30%
+#define FAN_TEST_MS         1000
 
 // Spin each motor both ways and report encoder counts, to check that
-// motor wiring, encoder wiring and direction signs all match
+// motor wiring, encoder wiring and direction signs all match. Then a short
+// run of the suction fan.
 static void motor_test(void) {
     const struct {
         const char *name;
@@ -40,6 +44,11 @@ static void motor_test(void) {
                motor_fault_a(), motor_fault_b());
     }
     motors_enable(false);
+
+    printf("fan %d%%\n", FAN_TEST_SPEED / 10);
+    fan_set(FAN_TEST_SPEED);
+    delay_ms(FAN_TEST_MS);
+    fan_set(0);
     printf("-- end --\n\n");
 }
 
@@ -58,6 +67,7 @@ int main(void) {
     analog_setup();
     sensors_setup();
     motors_setup();
+    fan_setup();
     encoders_setup();
 
     printf("\nRatatron II\n");
@@ -66,7 +76,7 @@ int main(void) {
     bool imu_ok = imu_setup();
     printf("IMU who_am_i: 0x%02X (%s)\n", imu_who_am_i(), imu_ok ? "ok" : "FAIL");
     printf("Battery: %u mV\n", battery_mv());
-    printf("Press the button to run the motor test\n\n");
+    printf("Press the button to run the motor and fan test\n\n");
 
     struct ir_reading ir[NUM_IR_SENSORS];
     uint32_t last_print = 0;
