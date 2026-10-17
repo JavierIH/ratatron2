@@ -19230,7 +19230,7 @@
 		(dnp no)
 		(uuid "d68554fe-36bd-49e0-8337-50cc7d9e849e")
 		(property "Reference" "D12"
-			(at 342.9 151 90)
+			(at 342.9 150.365 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19239,7 +19239,7 @@
 			)
 		)
 		(property "Value" "SSA34"
-			(at 342.9 153.5 90)
+			(at 342.9 152.865 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23802,6 +23802,76 @@
 			(justify left bottom)
 		)
 		(uuid "34332e2e-c0a0-4448-bdcf-0b23244fe855")
+	)
+	(label "MA_OUT1"
+		(at 80.01 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c7508f4-7a27-417f-ae07-64d4ecd5a925")
+	)
+	(label "MA_OUT2"
+		(at 80.01 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdcea700-592d-4df6-abf8-d027941643da")
+	)
+	(label "MB_OUT1"
+		(at 158.75 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4cc5830e-3458-443d-a672-8256dfa0f887")
+	)
+	(label "MB_OUT2"
+		(at 158.75 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a484f843-bb48-4691-b755-b07f30ab89d9")
+	)
+	(label "FAN_OUT"
+		(at 341.63 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1cd3446c-d495-416a-a2a8-931d25e274bf")
+	)
+	(label "BATT_IN"
+		(at 355.6 209.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7ebba109-4f8c-4663-b155-61b09449e9e3")
+	)
+	(label "U3_IN"
+		(at 105.41 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5aa1bb1-089e-404f-be63-9b810aee3da3")
 	)
 	(sheet_instances
 		(path "/"
