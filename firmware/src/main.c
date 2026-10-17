@@ -1,0 +1,92 @@
+#include <analog.h>
+#include <board.h>
+#include <clock.h>
+#include <encoders.h>
+#include <imu.h>
+#include <motors.h>
+#include <sensors.h>
+#include <serial.h>
+#include <ui.h>
+
+
+#define PRINT_PERIOD_MS     100
+#define MOTOR_TEST_SPEED    300     // 30%
+#define MOTOR_TEST_MS       500
+
+// Spin each motor both ways and report encoder counts, to check that
+// motor wiring, encoder wiring and direction signs all match
+static void motor_test(void) {
+    const struct {
+        const char *name;
+        int16_t a, b;
+    } steps[] = {
+        {"A fwd", MOTOR_TEST_SPEED, 0},
+        {"A rev", -MOTOR_TEST_SPEED, 0},
+        {"B fwd", 0, MOTOR_TEST_SPEED},
+        {"B rev", 0, -MOTOR_TEST_SPEED},
+    };
+
+    printf("\n-- motor test --\n");
+    motors_enable(true);
+    for (unsigned i = 0; i < sizeof(steps) / sizeof(steps[0]); i++) {
+        int16_t start_a = encoder_a();
+        int16_t start_b = encoder_b();
+        motors_set(steps[i].a, steps[i].b);
+        delay_ms(MOTOR_TEST_MS);
+        motors_set(0, 0);
+        delay_ms(200);
+        printf("%s: enc_a %+6d  enc_b %+6d\n", steps[i].name,
+               (int16_t)(encoder_a() - start_a), (int16_t)(encoder_b() - start_b));
+    }
+    motors_enable(false);
+    printf("-- end --\n\n");
+}
+
+static void startup_leds(void) {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        leds_set_mask(1 << i);
+        delay_ms(80);
+    }
+    leds_set_mask(0);
+}
+
+int main(void) {
+    clock_setup();
+    serial_setup();
+    ui_setup();
+    analog_setup();
+    sensors_setup();
+    motors_setup();
+    encoders_setup();
+
+    printf("\nRatatron II\n");
+    startup_leds();
+
+    bool imu_ok = imu_setup();
+    printf("IMU who_am_i: 0x%02X (%s)\n", imu_who_am_i(), imu_ok ? "ok" : "FAIL");
+    printf("Battery: %u mV\n", battery_mv());
+    printf("Press the button to run the motor test\n\n");
+
+    struct ir_reading ir[NUM_IR_SENSORS];
+    uint32_t last_print = 0;
+    bool last_button = false;
+
+    while (1) {
+        bool button = button_pressed();
+        if (button && !last_button) motor_test();
+        last_button = button;
+
+        if (millis() - last_print >= PRINT_PERIOD_MS) {
+            last_print = millis();
+            sensors_read(ir);
+            printf("bat %5u mV | ir SL %4d SR %4d FL %4d FR %4d | enc %6d %6d | gz %6d | int %d\n",
+                   battery_mv(),
+                   ir[IR_SIDE_LEFT].value, ir[IR_SIDE_RIGHT].value,
+                   ir[IR_FRONT_LEFT].value, ir[IR_FRONT_RIGHT].value,
+                   encoder_a(), encoder_b(), imu_gyro_z(), imu_int());
+
+            led_set(0, (millis() / 500) % 2);  // heartbeat
+        }
+    }
+    return 0;
+}
