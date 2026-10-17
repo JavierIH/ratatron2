@@ -1,9 +1,9 @@
 (sym_lib_table
-  (lib (name STM32F446RET6)(type Legacy)(uri ${KIPRJMOD}/STM32F446RET6/STM32F446RET6.lib)(options "")(descr ""))
-  (lib (name ratatron2-rescue)(type Legacy)(uri ${KIPRJMOD}/ratatron2-rescue.lib)(options "")(descr ""))
+  (lib (name STM32F446RET6)(type KiCad)(uri ${KIPRJMOD}/STM32F446RET6.kicad_sym)(options "")(descr "ST STM32F446RET6 LQFP-64"))
   (lib (name AO3400A)(type KiCad)(uri ${KIPRJMOD}/AO3400A.kicad_sym)(options "")(descr "AOS AO3400A N-MOSFET SOT-23"))
   (lib (name AO3401A)(type KiCad)(uri ${KIPRJMOD}/AO3401A.kicad_sym)(options "")(descr "AOS AO3401A P-MOSFET SOT-23"))
+  (lib (name AO4409)(type KiCad)(uri ${KIPRJMOD}/AO4409.kicad_sym)(options "")(descr "AOS AO4409 P-MOSFET SO-8"))
   (lib (name LSM6DSRX)(type KiCad)(uri ${KIPRJMOD}/LSM6DSRX.kicad_sym)(options "")(descr "ST LSM6DSRX IMU"))
-  (lib (name MP6551)(type Legacy)(uri ${KIPRJMOD}/MP6551.lib)(options "")(descr "MPS MP6551 H-bridge"))
+  (lib (name MP6551)(type KiCad)(uri ${KIPRJMOD}/MP6551.kicad_sym)(options "")(descr "MPS MP6551 H-bridge"))
   (lib (name MCP1755S)(type KiCad)(uri ${KIPRJMOD}/MCP1755S.kicad_sym)(options "")(descr "Microchip MCP1755S LDO SOT-223"))
 )

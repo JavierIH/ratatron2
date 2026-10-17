@@ -17,7 +17,7 @@ struct ir_reading {
     int16_t value;      // lit - ambient
 };
 
-// IR emitters SFH4550 (through AO3400A Q5..Q8) and phototransistors SFH309
+// IR emitters SFH4550 (through AO3400A Q5..Q8) and phototransistors ST-1KL3A
 void sensors_setup(void);
 void sensors_read(struct ir_reading readings[NUM_IR_SENSORS]);
 void emitter_set(enum ir_sensor sensor, int on);

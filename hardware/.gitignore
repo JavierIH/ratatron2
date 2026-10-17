@@ -5,3 +5,4 @@ _autosave-*
 \#auto_saved_files\#
 ~*.lck
 *.lck
+fp-info-cache

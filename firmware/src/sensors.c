@@ -4,8 +4,9 @@
 #include <clock.h>
 
 
-// Time for the phototransistor to settle after switching the emitter
-#define EMITTER_SETTLE_US   40
+// Time for the phototransistor to settle after switching the emitter.
+// ST-1KL3A with 1K5/3K3 loads, ZoroBot3 waits about one 16kHz tick
+#define EMITTER_SETTLE_US   60
 
 struct ir_channel {
     struct pin emitter;

@@ -12,6 +12,7 @@ void analog_setup(void) {
 
     gpio_mode_setup(BATT_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, BATT_PIN);
     gpio_mode_setup(IR_RX_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, IR_RX_PINS);
+    gpio_mode_setup(MOTOR_CUR_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, MOTOR_CUR_PINS);
 
     adc_power_off(ADC1);
     adc_set_clk_prescale(ADC_CCR_ADCPRE_BY4);  // 90MHz / 4 = 22.5MHz

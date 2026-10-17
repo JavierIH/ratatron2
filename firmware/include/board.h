@@ -20,6 +20,8 @@
 //  16   PA2   TX2        USART2_TX AF7 -> J5
 //  17   PA3   RX2        USART2_RX AF7 -> J5
 //  20   PA4   BATT_ADC   ADC12_IN4
+//  22   PA6   MA_CUR     ADC12_IN6, CM1+CM2 of U5 (motor A current)
+//  23   PA7   MB_CUR     ADC12_IN7, CM1+CM2 of U1 (motor B current)
 //  24   PC4   E_IR_SL    out
 //  25   PC5   E_IR_SR    out
 //  26   PB0   E_IR_FL    out
@@ -48,8 +50,8 @@
 //  61   PB8   ENCB_CHA   TIM2_CH1 AF1 (32 bit timer)
 //  62   PB9   ENCB_CHB   TIM2_CH2 AF1
 //
-//  Not connected: PC14, PC15, PA5, PA6, PA7, PA12, PB2, PB3 (SWO), PB5, PB6, PB7
-//  Reserved: PA6/PA7 motor current (ADC12_IN6/7), PB5 buzzer (TIM3_CH2)
+//  Not connected: PC14, PC15, PA5, PA12, PB2, PB3 (SWO), PB5, PB6, PB7
+//  Reserved: PB5 buzzer (TIM3_CH2)
 
 struct pin {
     uint32_t port;
@@ -83,6 +85,13 @@ struct pin {
 #define MA_FAULT_PIN        GPIO9
 #define MB_FAULT_PIN        GPIO10
 #define MOTOR_PWM_FREQ      20000
+
+// Motor current: CM1+CM2 (low side current / 10000) into 4K7 to VDD and 4K7 to GND.
+// 1.65V at 0A, ~0.24V/A, RC filtered with 100nF
+#define MOTOR_CUR_PORT      GPIOA
+#define MOTOR_CUR_PINS      (GPIO6 | GPIO7)
+#define MA_CUR_CHANNEL      ADC_CHANNEL6
+#define MB_CUR_CHANNEL      ADC_CHANNEL7
 
 // Suction fan: Q10 driven by TIM1_CH4
 #define FAN_PORT            GPIOA
