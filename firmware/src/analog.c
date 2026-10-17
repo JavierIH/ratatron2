@@ -21,7 +21,6 @@ void analog_setup(void) {
     rcc_periph_clock_enable(RCC_ADC1);
 
     gpio_mode_setup(BATT_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, BATT_PIN);
-    gpio_mode_setup(IR_RX_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, IR_RX_PINS);
     gpio_mode_setup(MOTOR_CUR_PORT, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, MOTOR_CUR_PINS);
 
     adc_power_off(ADC1);

@@ -29,37 +29,37 @@ static void cs_high(void) {
 
 static void write_reg(uint8_t reg, uint8_t value) {
     cs_low();
-    spi_xfer(SPI2, reg);
-    spi_xfer(SPI2, value);
+    spi_xfer(SPI3, reg);
+    spi_xfer(SPI3, value);
     cs_high();
 }
 
 static uint8_t read_reg(uint8_t reg) {
     cs_low();
-    spi_xfer(SPI2, reg | READ_FLAG);
-    uint8_t value = spi_xfer(SPI2, 0x00);
+    spi_xfer(SPI3, reg | READ_FLAG);
+    uint8_t value = spi_xfer(SPI3, 0x00);
     cs_high();
     return value;
 }
 
 bool imu_setup(void) {
-    rcc_periph_clock_enable(RCC_SPI2);
+    rcc_periph_clock_enable(RCC_SPI3);
 
     gpio_mode_setup(IMU_CS_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, IMU_CS_PIN);
     cs_high();
     gpio_mode_setup(IMU_INT_PORT, GPIO_MODE_INPUT, GPIO_PUPD_NONE, IMU_INT_PIN);
 
     gpio_mode_setup(IMU_SPI_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, IMU_SPI_PINS);
-    gpio_set_af(IMU_SPI_PORT, GPIO_AF5, IMU_SPI_PINS);
+    gpio_set_af(IMU_SPI_PORT, GPIO_AF6, IMU_SPI_PINS);
 
     // Up to 10MHz: 45MHz / 8 = 5.6MHz. Mode 3.
-    spi_init_master(SPI2, SPI_CR1_BAUDRATE_FPCLK_DIV_8,
+    spi_init_master(SPI3, SPI_CR1_BAUDRATE_FPCLK_DIV_8,
                     SPI_CR1_CPOL_CLK_TO_1_WHEN_IDLE,
                     SPI_CR1_CPHA_CLK_TRANSITION_2,
                     SPI_CR1_DFF_8BIT, SPI_CR1_MSBFIRST);
-    spi_enable_software_slave_management(SPI2);
-    spi_set_nss_high(SPI2);
-    spi_enable(SPI2);
+    spi_enable_software_slave_management(SPI3);
+    spi_set_nss_high(SPI3);
+    spi_enable(SPI3);
 
     write_reg(REG_CTRL3_C, CTRL3_C_SW_RESET);
     uint32_t start = millis();
@@ -81,9 +81,9 @@ uint8_t imu_who_am_i(void) {
 
 int16_t imu_gyro_z(void) {
     cs_low();
-    spi_xfer(SPI2, REG_OUTZ_L_G | READ_FLAG);
-    uint8_t low = spi_xfer(SPI2, 0x00);
-    uint8_t high = spi_xfer(SPI2, 0x00);
+    spi_xfer(SPI3, REG_OUTZ_L_G | READ_FLAG);
+    uint8_t low = spi_xfer(SPI3, 0x00);
+    uint8_t high = spi_xfer(SPI3, 0x00);
     cs_high();
     return (int16_t)((high << 8) | low);
 }

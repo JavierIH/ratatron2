@@ -10,14 +10,15 @@
 
 struct ir_channel {
     struct pin emitter;
+    struct pin receiver;
     uint8_t adc_channel;
 };
 
 static const struct ir_channel channels[NUM_IR_SENSORS] = {
-    [IR_SIDE_LEFT]   = {E_IR_SL, R_IR_SL_CHANNEL},
-    [IR_SIDE_RIGHT]  = {E_IR_SR, R_IR_SR_CHANNEL},
-    [IR_FRONT_LEFT]  = {E_IR_FL, R_IR_FL_CHANNEL},
-    [IR_FRONT_RIGHT] = {E_IR_FR, R_IR_FR_CHANNEL},
+    [IR_SIDE_LEFT]   = {E_IR_SL, R_IR_SL, R_IR_SL_CHANNEL},
+    [IR_SIDE_RIGHT]  = {E_IR_SR, R_IR_SR, R_IR_SR_CHANNEL},
+    [IR_FRONT_LEFT]  = {E_IR_FL, R_IR_FL, R_IR_FL_CHANNEL},
+    [IR_FRONT_RIGHT] = {E_IR_FR, R_IR_FR, R_IR_FR_CHANNEL},
 };
 
 void sensors_setup(void) {
@@ -25,6 +26,8 @@ void sensors_setup(void) {
         gpio_mode_setup(channels[i].emitter.port, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE,
                         channels[i].emitter.pin);
         gpio_clear(channels[i].emitter.port, channels[i].emitter.pin);
+        gpio_mode_setup(channels[i].receiver.port, GPIO_MODE_ANALOG, GPIO_PUPD_NONE,
+                        channels[i].receiver.pin);
     }
 }
 

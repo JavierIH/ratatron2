@@ -16,23 +16,25 @@ static void encoder_timer_setup(uint32_t timer) {
 }
 
 void encoders_setup(void) {
-    rcc_periph_clock_enable(RCC_TIM5);
     rcc_periph_clock_enable(RCC_TIM2);
+    rcc_periph_clock_enable(RCC_TIM5);
 
     // Pull-ups keep the count still with an encoder unplugged
-    gpio_mode_setup(ENCA_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, ENCA_PINS);
-    gpio_set_af(ENCA_PORT, GPIO_AF2, ENCA_PINS);
+    gpio_mode_setup(ENCA_CHA_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, ENCA_CHA_PIN);
+    gpio_set_af(ENCA_CHA_PORT, GPIO_AF1, ENCA_CHA_PIN);
+    gpio_mode_setup(ENCA_CHB_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, ENCA_CHB_PIN);
+    gpio_set_af(ENCA_CHB_PORT, GPIO_AF1, ENCA_CHB_PIN);
     gpio_mode_setup(ENCB_PORT, GPIO_MODE_AF, GPIO_PUPD_PULLUP, ENCB_PINS);
-    gpio_set_af(ENCB_PORT, GPIO_AF1, ENCB_PINS);
+    gpio_set_af(ENCB_PORT, GPIO_AF2, ENCB_PINS);
 
-    encoder_timer_setup(TIM5);
     encoder_timer_setup(TIM2);
+    encoder_timer_setup(TIM5);
 }
 
 int32_t encoder_a(void) {
-    return (int32_t)timer_get_counter(TIM5);
+    return (int32_t)timer_get_counter(TIM2);
 }
 
 int32_t encoder_b(void) {
-    return (int32_t)timer_get_counter(TIM2);
+    return (int32_t)timer_get_counter(TIM5);
 }

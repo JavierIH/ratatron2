@@ -5,7 +5,7 @@
 
 #define FAN_MAX     1000
 
-// Suction fan through Q10, PWM on TIM1 at 20kHz. Speed range 0..FAN_MAX
+// Suction fan through Q10, PWM on TIM3 at 20kHz. Speed range 0..FAN_MAX
 void fan_setup(void);
 void fan_set(uint16_t speed);
 
