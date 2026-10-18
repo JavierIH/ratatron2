@@ -12,7 +12,7 @@
 //  Pin  Port  Net        Function
 //   2   PC13  BUTTON     in, external 4K7 pull-up, active low
 //   3   PC14  MB_FAULT   in, nFAULT of U1
-//   5   PH0   OSC_IN     8MHz HSE
+//   5   PH0   OSC_IN     16MHz HSE
 //   6   PH1   OSC_OUT
 //   8   PC0   LED6       out
 //   9   PC1   MB_CUR     ADC123_IN11, CM1+CM2 of U1 (motor B current)

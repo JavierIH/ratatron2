@@ -13,8 +13,8 @@ void sys_tick_handler(void) {
 }
 
 void clock_setup(void) {
-    // 8MHz crystal -> 180MHz SYSCLK, APB1 45MHz, APB2 90MHz
-    rcc_clock_setup_pll(&rcc_hse_8mhz_3v3[RCC_CLOCK_3V3_180MHZ]);
+    // 16MHz crystal -> 180MHz SYSCLK, APB1 45MHz, APB2 90MHz
+    rcc_clock_setup_pll(&rcc_hse_16mhz_3v3[RCC_CLOCK_3V3_180MHZ]);
 
     rcc_periph_clock_enable(RCC_GPIOA);
     rcc_periph_clock_enable(RCC_GPIOB);
