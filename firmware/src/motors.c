@@ -1,5 +1,6 @@
 #include <motors.h>
 #include <board.h>
+#include <clock.h>
 
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/timer.h>
@@ -7,9 +8,10 @@
 
 static uint32_t pwm_period;
 
-// With EN high each MP6551 output follows its IN pin. One input stays high and
-// the other is pulled low for the duty part of the period; the rest of the
-// period both are high, so the motor brakes through the high side (slow decay).
+// With nSLEEP high each DRV8874 output follows its IN pin (PWM mode). One input
+// stays high and the other is pulled low for the duty part of the period; the
+// rest of the period both are high, so the motor brakes through the low side
+// (slow decay) and IPROPI sees the motor current all the time.
 // A compare value of pwm_period keeps the output high for the whole period.
 
 void motors_setup(void) {
@@ -18,7 +20,7 @@ void motors_setup(void) {
     gpio_mode_setup(MOTOR_EN_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, MOTOR_EN_PIN);
     gpio_clear(MOTOR_EN_PORT, MOTOR_EN_PIN);
 
-    // nFAULT may be open drain
+    // nFAULT is open drain
     gpio_mode_setup(MOTOR_FAULT_PORT, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP,
                     MA_FAULT_PIN | MB_FAULT_PIN);
 
@@ -48,8 +50,12 @@ void motors_setup(void) {
 }
 
 void motors_enable(bool enable) {
-    if (enable) gpio_set(MOTOR_EN_PORT, MOTOR_EN_PIN);
-    else gpio_clear(MOTOR_EN_PORT, MOTOR_EN_PIN);
+    if (enable) {
+        gpio_set(MOTOR_EN_PORT, MOTOR_EN_PIN);
+        delay_ms(1);  // DRV8874 wake up time
+    } else {
+        gpio_clear(MOTOR_EN_PORT, MOTOR_EN_PIN);
+    }
 }
 
 static void motor_set(enum tim_oc_id in1, enum tim_oc_id in2, int16_t speed) {

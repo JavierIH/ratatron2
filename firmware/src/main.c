@@ -18,8 +18,7 @@
 
 // Spin each motor both ways and report encoder counts, to check that
 // motor wiring, encoder wiring and direction signs all match. Then a short
-// run of the suction fan. Bridge current is read at the end of each step;
-// at 30% duty the motor current is about 3.3 times that.
+// run of the suction fan. Motor current is read at the end of each step.
 static void motor_test(void) {
     const struct {
         const char *name;

@@ -15,7 +15,7 @@
 //   5   PH0   OSC_IN     16MHz HSE
 //   6   PH1   OSC_OUT
 //   8   PC0   LED6       out
-//   9   PC1   MB_CUR     ADC123_IN11, CM1+CM2 of U1 (motor B current)
+//   9   PC1   MB_CUR     ADC123_IN11, IPROPI of U1 (motor B current)
 //  10   PC2   R_IR_FR    ADC123_IN12
 //  11   PC3   E_IR_FR    out
 //  14   PA0   ENCB_CHA   TIM5_CH1 AF2 (32 bit timer)
@@ -23,7 +23,7 @@
 //  16   PA2   E_IR_SR    out
 //  17   PA3   R_IR_SR    ADC123_IN3
 //  24   PC4   BATT_ADC   ADC12_IN14
-//  25   PC5   MA_CUR     ADC12_IN15, CM1+CM2 of U5 (motor A current)
+//  25   PC5   MA_CUR     ADC12_IN15, IPROPI of U5 (motor A current)
 //  26   PB0   R_IR_FL    ADC12_IN8
 //  27   PB1   R_IR_SL    ADC12_IN9
 //  33   PB12  E_IR_SL    out
@@ -36,7 +36,7 @@
 //  42   PA9   MA_IN2     TIM1_CH2 AF1
 //  43   PA10  MB_IN1     TIM1_CH3 AF1
 //  44   PA11  MB_IN2     TIM1_CH4 AF1
-//  45   PA12  M_EN       out, EN1+EN2 of both MP6551
+//  45   PA12  M_EN       out, nSLEEP of both DRV8874
 //  46   PA13  SWDIO      J4
 //  49   PA14  SWCLK      J4
 //  50   PA15  ENCA_CHA   TIM2_CH1 AF1 (32 bit timer)
@@ -78,7 +78,7 @@ struct pin {
 #define BATT_R_TOP          47
 #define BATT_R_BOTTOM       27
 
-// Motor drivers: 2x MP6551, PWM on IN1/IN2
+// Motor drivers: 2x DRV8874 in PWM mode (PMODE = VDD), PWM on IN1/IN2
 #define MOTOR_PWM_PORT      GPIOA
 #define MOTOR_PWM_PINS      (GPIO8 | GPIO9 | GPIO10 | GPIO11)
 #define MOTOR_EN_PORT       GPIOA
@@ -88,14 +88,14 @@ struct pin {
 #define MB_FAULT_PIN        GPIO14
 #define MOTOR_PWM_FREQ      20000
 
-// Motor current: CM1+CM2 (low side current / 10000) into 4K7 to VDD and 4K7 to GND.
-// 1.65V at 0A, ~0.24V/A, RC filtered with 100nF
+// Motor current: IPROPI (455uA per A of low side current) into 2K2 to GND,
+// 0V at 0A, ~1V/A, 10nF filter. VREF = VDD, so each driver chops above ~3.3A
 #define MOTOR_CUR_PORT      GPIOC
 #define MOTOR_CUR_PINS      (GPIO5 | GPIO1)
 #define MA_CUR_CHANNEL      ADC_CHANNEL15
 #define MB_CUR_CHANNEL      ADC_CHANNEL11
-#define MOTOR_CUR_RATIO     10000   // low side current / CM current
-#define MOTOR_CUR_R_OHM     2350    // 4K7 || 4K7
+#define MOTOR_CUR_UA_PER_A  455     // IPROPI current per A of motor current
+#define MOTOR_CUR_R_OHM     2200    // R32, R34
 
 // Suction fan: Q10 driven by TIM3_CH2
 #define FAN_PORT            GPIOB
