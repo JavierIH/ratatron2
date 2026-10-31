@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Ratatron II")
-		(date "2026-10-17")
+		(date "2026-10-22")
 		(rev "A")
 	)
 	(lib_symbols
@@ -33,7 +33,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm"
+			(property "Footprint" "custom-lib:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x3.55mm"
 				(at 0 -17.78 0)
 				(effects
 					(font
@@ -11110,7 +11110,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM15AG601SN1D"
+		(property "Value" "BLM18AG601SN1D"
 			(at 372.11 91.44 270)
 			(effects
 				(font
@@ -15760,7 +15760,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm"
+		(property "Footprint" "custom-lib:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x3.55mm"
 			(at 54.61 74.93 0)
 			(effects
 				(font
@@ -16837,7 +16837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x2.31mm"
+		(property "Footprint" "custom-lib:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x3.55mm"
 			(at 133.35 74.93 0)
 			(effects
 				(font
@@ -22977,7 +22977,7 @@
 		)
 		(uuid "a01a4067-bd2b-4118-8856-e7d1ff423b60")
 	)
-	(text "ST-1KL3A (TO-18): check which lead is the collector before soldering (pad 1 = C)"
+	(text "ST-1KL3A (TO-18): check which lead is the collector before soldering (pad 3 = C, pad 4 = E)"
 		(exclude_from_sim no)
 		(at 130.81 276.86 0)
 		(effects
