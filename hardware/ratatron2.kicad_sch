@@ -12107,7 +12107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "custom-lib:IR_PAIR_1x04"
+		(property "Footprint" "custom-lib:IR_PAIR_1x04_R"
 			(at 53.975 232.41 0)
 			(effects
 				(font
@@ -12374,7 +12374,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "custom-lib:IR_PAIR_1x04"
+		(property "Footprint" "custom-lib:IR_PAIR_1x04_R"
 			(at 163.322 251.206 0)
 			(effects
 				(font
@@ -12904,7 +12904,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "custom-lib:IR_PAIR_1x04"
+		(property "Footprint" "custom-lib:IR_PAIR_1x04_R"
 			(at 197.612 251.206 0)
 			(effects
 				(font
@@ -13837,7 +13837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "custom-lib:IR_PAIR_1x04"
+		(property "Footprint" "custom-lib:IR_PAIR_1x04_R"
 			(at 107.315 232.41 0)
 			(effects
 				(font
