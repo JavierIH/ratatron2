@@ -3,49 +3,138 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "IR emitter + phototransistor pair, 1x04 P2.54-3.41-2.54mm, 13x8mm body outline, mirrored pin order (4-3-2-1)")
+	(descr "IR emitter + phototransistor pair, 1x04 P2.54-3.41-2.54mm, arrows out over the emitter and in over the receiver, slot between the bodies, body outline on Dwgs.User, mirrored (pads 4-3-2-1)")
 	(tags "IR pair 1x04 mirrored")
 	(property "Reference" "REF**"
-		(at 4.245 -11 0)
+		(at 4.68 -14 0)
 		(layer "F.SilkS")
-		(effects (font (size 1 1) (thickness 0.15)))
+		(hide yes)
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
 	)
 	(property "Value" "IR_PAIR_1x04_R"
-		(at 4.245 -5.75 0)
+		(at 19.29 -11.4 0)
 		(layer "F.Fab")
-		(effects (font (size 1 1) (thickness 0.15)))
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(property "Footprint" ""
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(effects (font (size 1.27 1.27) (thickness 0.15)))
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
 	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(effects (font (size 1.27 1.27) (thickness 0.15)))
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
 	)
 	(property "Description" ""
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(effects (font (size 1.27 1.27) (thickness 0.15)))
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
 	)
 	(attr through_hole)
-	(fp_rect (start -2.255 -9.75) (end 10.745 1.75)
-		(stroke (width 0.15) (type solid)) (fill no) (layer "F.SilkS"))
-	(fp_line (start -2.255 -1.75) (end 10.745 -1.75)
-		(stroke (width 0.15) (type solid)) (layer "F.SilkS"))
-	(fp_rect (start -2.255 -9.75) (end 10.745 -1.75)
-		(stroke (width 0.1) (type solid)) (fill no) (layer "F.Fab"))
-	(fp_rect (start -2.505 -10) (end 10.995 2)
-		(stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))
+	(fp_poly
+		(pts
+			(xy 8.49 -6.8) (xy 6.09 -6.8) (xy 7.29 -7.999999)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy 8.49 -4.8) (xy 6.09 -4.8) (xy 7.29 -6.000001)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy 0.094763 -7.6) (xy 2.494763 -7.6) (xy 1.294763 -6.4)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy 0.094763 -5.704351) (xy 2.494763 -5.704351) (xy 1.294763 -4.504351)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy 10.79 -10) (xy -2.21 -10) (xy -2.21 -3) (xy 10.79 -3)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+	)
+	(fp_poly
+		(pts
+			(xy 5.29 -9.2) (xy 3.29 -9.2) (xy 3.29 -3.8) (xy 5.29 -3.8)
+		)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+	)
 	(fp_text user "${REFERENCE}"
-		(at 4.245 -7.25 0)
+		(at 17.49 -13.8 0)
 		(layer "F.Fab")
-		(effects (font (size 1 1) (thickness 0.15)))
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
 	)
 	(pad "1" thru_hole circle (at 8.49 0) (size 1.4 1.4) (drill 0.8) (layers "*.Cu" "*.Mask"))
 	(pad "2" thru_hole circle (at 5.95 0) (size 1.4 1.4) (drill 0.8) (layers "*.Cu" "*.Mask"))
