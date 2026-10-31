@@ -3236,6 +3236,17 @@
 			(uuid "75a80240-50e7-4294-a4d3-027f3be22ce4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/custom-lib.3dshapes/IR_PAIR_1x04_R.step"
+			(offset
+				(xyz 4.32 10 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -5146,6 +5157,17 @@
 			(uuid "5751bdb3-f43f-4018-8277-ec307a6461f9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/custom-lib.3dshapes/IR_PAIR_1x04_R.step"
+			(offset
+				(xyz 4.32 10 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
@@ -12449,6 +12471,17 @@
 			(uuid "f228f00f-3b14-46e5-9345-f49ea3457b29")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/custom-lib.3dshapes/IR_PAIR_1x04.step"
+			(offset
+				(xyz 4.17 10 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 		(layer "F.Cu")
@@ -15496,6 +15529,17 @@
 			(uuid "7e4dce3a-19d5-40da-af46-58af402e4f1e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/custom-lib.3dshapes/IR_PAIR_1x04.step"
+			(offset
+				(xyz 4.17 10 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "custom-lib:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.46x3.55mm"
 		(layer "F.Cu")
