@@ -1,0 +1,102 @@
+(footprint "EDAC_686F0432350125E_1x04_P2.20mm_Horizontal"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "EDAC 686F0432350125E magnetic pogo target (female), 4 pos, P2.20mm, right angle, recessed contacts, board edge mount: body overhangs the edge 3.71 mm and hangs 1.5 mm below the top face. Mates with 685F0422350125E. Board edge at y -1.95 (line on F.Fab)")
+	(tags "magnetic pogo connector EDAC 686 right angle edge")
+	(property "Reference" "REF**"
+		(at 3.3 2.2 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "686F0432350125E"
+		(at 3.3 3.2 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5752/686F0432350125E.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line (start -4.2 1) (end 10.8 1) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+	(fp_line (start -4.2 1) (end -4.2 -1.95) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+	(fp_line (start 10.8 1) (end 10.8 -1.95) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+	(fp_line (start -0.9 1.25) (end 0.9 1.25) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
+	(fp_line (start -4.2 1) (end 10.8 1) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start 10.8 1) (end 10.8 -4.81) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start 10.8 -4.81) (end -4.2 -4.81) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start -4.2 -4.81) (end -4.2 1) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start -1.75 -4.81) (end -1.75 -5.66) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start -1.75 -5.66) (end 8.35 -5.66) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start 8.35 -5.66) (end 8.35 -4.81) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
+	(fp_line (start -5 -1.95) (end 11.6 -1.95) (stroke (width 0.1) (type dash)) (layer "F.Fab"))
+	(fp_text user "board edge"
+		(at 3.3 -1.4 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.06)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.3 -3.4 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_rect (start -4.45 -5.91) (end 11.05 1.25) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))
+	(pad "" np_thru_hole circle (at -1.7 0.2) (size 1.15 1.15) (drill 1.15) (layers "*.Cu" "*.Mask"))
+	(pad "" np_thru_hole circle (at 8.3 0.2) (size 1.15 1.15) (drill 1.15) (layers "*.Cu" "*.Mask"))
+	(pad "1" thru_hole rect (at 0 0) (size 1.5 1.5) (drill 0.9) (layers "*.Cu" "*.Mask"))
+	(pad "2" thru_hole circle (at 2.2 0) (size 1.5 1.5) (drill 0.9) (layers "*.Cu" "*.Mask"))
+	(pad "3" thru_hole circle (at 4.4 0) (size 1.5 1.5) (drill 0.9) (layers "*.Cu" "*.Mask"))
+	(pad "4" thru_hole circle (at 6.6 0) (size 1.5 1.5) (drill 0.9) (layers "*.Cu" "*.Mask"))
+	(embedded_fonts no)
+)
