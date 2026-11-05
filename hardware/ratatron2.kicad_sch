@@ -6321,12 +6321,6 @@
 		(uuid "1da05f38-8ef5-4124-afdc-007253620664")
 	)
 	(junction
-		(at 57.15 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "24f45b84-ff23-43cf-a725-7e470bf823d0")
-	)
-	(junction
 		(at 342.9 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6403,12 +6397,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "539da752-f65e-47f3-86dd-d369103e139f")
-	)
-	(junction
-		(at 34.29 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5d6d5386-6982-4f76-aa27-66e506290e40")
 	)
 	(junction
 		(at 133.35 36.83)
@@ -6816,16 +6804,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 135.89) (xy 57.15 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ee79a28-c2bc-4ab3-b2bf-51330f960b2b")
-	)
-	(wire
-		(pts
 			(xy 232.41 41.91) (xy 232.41 27.94)
 		)
 		(stroke
@@ -7116,16 +7094,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 135.89) (xy 57.15 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "243c2de8-5251-4cb1-8abd-e47e594fa1a2")
-	)
-	(wire
-		(pts
 			(xy 203.2 85.09) (xy 217.17 85.09)
 		)
 		(stroke
@@ -7193,16 +7161,6 @@
 			(type default)
 		)
 		(uuid "27fcade4-e78d-4210-838d-730ef5ab6083")
-	)
-	(wire
-		(pts
-			(xy 34.29 116.84) (xy 34.29 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28569cf5-0a2d-4f80-964c-d804dcc5461a")
 	)
 	(wire
 		(pts
@@ -7283,16 +7241,6 @@
 			(type default)
 		)
 		(uuid "2c2e363d-6286-4d48-bc8d-6e52aef727cb")
-	)
-	(wire
-		(pts
-			(xy 34.29 127) (xy 34.29 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d20f625-abd5-4163-9a9a-ef194c40b853")
 	)
 	(wire
 		(pts
@@ -7696,7 +7644,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 127) (xy 57.15 135.89)
+			(xy 57.15 127) (xy 57.15 138.43)
 		)
 		(stroke
 			(width 0)
@@ -8266,16 +8214,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 135.89) (xy 38.1 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b910ab2-97b4-4ba5-961f-e1112d18cdf1")
-	)
-	(wire
-		(pts
 			(xy 255.27 27.94) (xy 255.27 41.91)
 		)
 		(stroke
@@ -8453,16 +8391,6 @@
 			(type default)
 		)
 		(uuid "8491bdda-99c3-4d54-9449-eb82d4dbd24f")
-	)
-	(wire
-		(pts
-			(xy 45.72 135.89) (xy 48.26 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8494926a-c276-40e3-89ee-0ceb1198f684")
 	)
 	(wire
 		(pts
@@ -9216,16 +9144,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 127) (xy 20.32 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfcd6438-004f-4960-bc5b-a8560a3cb915")
-	)
-	(wire
-		(pts
 			(xy 156.21 139.7) (xy 156.21 142.24)
 		)
 		(stroke
@@ -9656,7 +9574,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 127) (xy 34.29 127)
+			(xy 41.91 127) (xy 20.32 127)
 		)
 		(stroke
 			(width 0)
@@ -9913,16 +9831,6 @@
 			(type default)
 		)
 		(uuid "f8f2fa67-65ba-4efc-b98a-3c74703ba3a5")
-	)
-	(wire
-		(pts
-			(xy 34.29 125.73) (xy 34.29 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9394c36-104c-4002-9778-80533819db1d")
 	)
 	(wire
 		(pts
@@ -13001,140 +12909,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 52.07 135.89 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a7b8df0")
-		(property "Reference" "R3"
-			(at 52.07 130.6322 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 52.07 132.9436 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 52.07 134.112 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 52.07 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7cfd68cd-9662-4476-b5ac-9821e27412ae")
-		)
-		(pin "2"
-			(uuid "b57e6254-9316-4efc-8370-1ffc3a155b10")
-		)
-		(instances
-			(project "ratatron2"
-				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 41.91 135.89 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a7b8ec1")
-		(property "Reference" "C13"
-			(at 43.0784 138.811 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 40.767 138.811 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 38.1 136.8552 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 41.91 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3eca2741-d914-4a07-8d04-5b744ef33c9b")
-		)
-		(pin "2"
-			(uuid "b52af5ec-42bf-421c-b5aa-b0d43725dd2c")
-		)
-		(instances
-			(project "ratatron2"
-				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
-					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 57.15 138.43 0)
 		(unit 1)
@@ -13193,138 +12967,6 @@
 			(project "ratatron2"
 				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 34.29 121.92 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a7b92bd")
-		(property "Reference" "R2"
-			(at 36.068 120.7516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4K7"
-			(at 36.068 123.063 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 36.068 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 34.29 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7f3b42ac-d9cd-4452-b558-1286654baebe")
-		)
-		(pin "2"
-			(uuid "6ca8c5b8-5cb1-4039-86af-e0a935cbe16a")
-		)
-		(instances
-			(project "ratatron2"
-				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 34.29 116.84 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a7b9416")
-		(property "Reference" "#PWR017"
-			(at 34.29 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDD"
-			(at 34.7218 112.4458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 34.29 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "04159369-434f-4a59-9e9f-dfad2a092ca0")
-		)
-		(instances
-			(project "ratatron2"
-				(path "/2004f7a1-e0c1-4b75-9854-ea5122472558"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
