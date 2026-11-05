@@ -10,7 +10,7 @@
 // left IR, 49-64 the fan (rear) and 1-16 the right IR.
 //
 //  Pin  Port  Net        Function
-//   2   PC13  BUTTON     in, external 4K7 pull-up, active low
+//   2   PC13  BUTTON     in, internal pull-up, active low
 //   3   PC14  MB_FAULT   in, nFAULT of U1
 //   5   PH0   OSC_IN     16MHz HSE
 //   6   PH1   OSC_OUT
