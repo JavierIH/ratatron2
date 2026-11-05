@@ -16820,7 +16820,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "custom-lib:EDAC_686F0432350125E_1x04_P2.20mm_Horizontal"
+		(property "Footprint" "custom-lib:Conn_Magnetic_1x04_P2.54mm_Horizontal"
 			(at 349.25 234.95 0)
 			(effects
 				(font
@@ -16829,7 +16829,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5752/686F0432350125E.pdf"
+		(property "Datasheet" "~"
 			(at 349.25 234.95 0)
 			(effects
 				(font
