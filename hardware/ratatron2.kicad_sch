@@ -20318,7 +20318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "custom-lib:SolderPads_1x02_P2.54mm"
 			(at 172.72 55.88 0)
 			(effects
 				(font
@@ -21293,7 +21293,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
+		(property "Footprint" "custom-lib:SolderPads_1x02_P2.00mm"
 			(at 358.14 148.59 0)
 			(effects
 				(font
@@ -22590,7 +22590,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "custom-lib:SolderPads_1x02_P2.54mm"
 			(at 93.98 55.88 0)
 			(effects
 				(font
