@@ -19676,7 +19676,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "custom-lib:Encoder_Slot_1x04"
 			(at 281.94 238.76 0)
 			(effects
 				(font
@@ -22218,7 +22218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "custom-lib:Encoder_Slot_1x04"
 			(at 232.41 238.76 0)
 			(effects
 				(font
@@ -23971,6 +23971,44 @@
 				)
 			)
 		)
+	)
+	(text "Modules panelised in the wheel notches, snapped off at the bridges. J8/J9 are the slots."
+		(exclude_from_sim no)
+		(at 200.66 279.4 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "14c42be3-4dcb-424e-b940-557f0eaec287")
+	)
+	(sheet
+		(at 200.66 261.62)
+		(size 35.56 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "036776a3-be1a-4c0c-b45b-706db5771e66")
+		(property "Sheetname" "Encoder A" (at 200.66 260.92 0)
+			(effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "encoder.kicad_sch" (at 200.66 272.38 0)
+			(effects (font (size 1.27 1.27)) (justify left top)))
+		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558" (page "2"))))
+	)
+	(sheet
+		(at 247.65 261.62)
+		(size 35.56 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "95fdedc3-917d-4b8e-b815-e74af7ab3f5c")
+		(property "Sheetname" "Encoder B" (at 247.65 260.92 0)
+			(effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "encoder.kicad_sch" (at 247.65 272.38 0)
+			(effects (font (size 1.27 1.27)) (justify left top)))
+		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558" (page "3"))))
 	)
 	(sheet_instances
 		(path "/"

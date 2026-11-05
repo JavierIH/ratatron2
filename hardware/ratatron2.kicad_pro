@@ -724,6 +724,14 @@
     [
       "2004f7a1-e0c1-4b75-9854-ea5122472558",
       "Root"
+    ],
+    [
+      "036776a3-be1a-4c0c-b45b-706db5771e66",
+      "Encoder A"
+    ],
+    [
+      "95fdedc3-917d-4b8e-b815-e74af7ab3f5c",
+      "Encoder B"
     ]
   ],
   "text_variables": {}

@@ -9,4 +9,5 @@
   (lib (name MCP1755S)(type KiCad)(uri ${KIPRJMOD}/MCP1755S.kicad_sym)(options "")(descr "Microchip MCP1755S LDO SOT-223"))
   (lib (name MCP1755)(type KiCad)(uri ${KIPRJMOD}/MCP1755.kicad_sym)(options "")(descr "Microchip MCP1755 LDO SOT-23-5"))
   (lib (name IR_PAIR)(type KiCad)(uri ${KIPRJMOD}/IR_PAIR.kicad_sym)(options "")(descr "IR emitter + phototransistor pair, 1x04"))
+  (lib (name AS5147P)(type KiCad)(uri ${KIPRJMOD}/AS5147P.kicad_sym)(options "")(descr "AS5147P magnetic encoder TSSOP-14"))
 )
