@@ -569,107 +569,6 @@
 		)
 		(embedded_fonts no)
 	)
-(symbol "power:GND"
-		(power)
-		(pin_numbers
-			(hide yes)
-		)
-		(pin_names
-			(offset 0)
-			(hide yes)
-		)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "#PWR"
-			(at 0 -6.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 0 -3.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(symbol "GND_0_1"
-			(polyline
-				(pts
-					(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-				)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-		)
-		(symbol "GND_1_1"
-			(pin power_in line
-				(at 0 0 270)
-				(length 0)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)
 (symbol "power:PWR_FLAG"
 		(power)
 		(pin_numbers
@@ -802,24 +701,16 @@
 		(effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "2db79ac9-b63e-4765-a18d-e4a7f078cc98"))
 (wire (pts (xy 114.3 92.71) (xy 111.76 92.71))
 		(stroke (width 0) (type default)) (uuid "dd79ad96-f4ad-453d-b763-a5d95282ed93"))
-(symbol (lib_id "power:GND") (at 111.76 92.71 270) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7f087e07-3dc4-4133-9825-c1f6810cb019")
-		(property "Reference" "#PWR105" (at 114.3 91.44 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 111.76 96.52 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Footprint" "" (at 111.76 92.71 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 111.76 92.71 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 111.76 92.71 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "16467985-ab7f-4721-bb39-26fc66ee0e31"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR105") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR106") (unit 1))))
-	)
+(label "GND" (at 111.76 92.71 180)
+			(effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "f43aa5c8-777a-4c69-af17-1b98acc75f96"))
 (no_connect (at 139.7 82.55) (uuid "5b0dc455-065d-412d-b52e-ab92d668babc"))
 (no_connect (at 139.7 92.71) (uuid "0819e84e-9196-4892-9c1f-0eee3c596096"))
 (no_connect (at 139.7 95.25) (uuid "512ee75b-d003-473d-8d58-bf9199124c96"))
 (no_connect (at 139.7 97.79) (uuid "23aafc40-ff5d-4ad6-8d53-f8383874fcf3"))
 (wire (pts (xy 139.7 85.09) (xy 142.24 85.09))
 		(stroke (width 0) (type default)) (uuid "de6bcc37-6998-4ed1-8f41-987edead6f2a"))
-(symbol (lib_id "power:GND") (at 142.24 85.09 90) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c508d983-f446-4506-a5b1-8a6edd2f03a6")
-		(property "Reference" "#PWR107" (at 144.78 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 142.24 88.9 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Footprint" "" (at 142.24 85.09 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 142.24 85.09 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 142.24 85.09 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "04e3ac1e-7279-4482-a6c1-a1ae035be2e4"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR107") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR108") (unit 1))))
-	)
+(label "GND" (at 142.24 85.09 0)
+			(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "073ad377-680a-4835-9b7d-0d496583b932"))
 (wire (pts (xy 139.7 87.63) (xy 139.7 90.17))
 		(stroke (width 0) (type default)) (uuid "9701d3b8-52d4-4d3a-8989-34309be21bd8"))
 (wire (pts (xy 139.7 87.63) (xy 147.32 87.63))
@@ -837,12 +728,8 @@
 		(pin "1" (uuid "47dd50e6-2991-47a7-8bf4-14a7fed848b7")) (pin "2" (uuid "86d15359-9d03-4202-aecb-dc67c3264aaf"))
 		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "C42") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "C43") (unit 1))))
 	)
-(symbol (lib_id "power:GND") (at 152.4 95.25 0) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1c10e75d-f55e-4ff0-956f-f57d140c4cae")
-		(property "Reference" "#PWR109" (at 154.94 93.98 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 152.4 99.06 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 152.4 95.25 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 152.4 95.25 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 152.4 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "ad2be5c3-7312-4e33-91cd-663ed5f847f9"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR109") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR110") (unit 1))))
-	)
+(label "GND" (at 152.4 95.25 270)
+			(effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "4057c964-568d-4937-a62a-47a66aebda08"))
 (symbol (lib_id "Device:R") (at 83.82 78.74 0) (unit 1)
 		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5b2a9757-bc88-4234-be74-c6043de2ebf6")
 		(property "Reference" "R35" (at 86.36 77.47 0) (effects (font (size 1.27 1.27)))) (property "Value" "10K" (at 86.36 80.01 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 83.82 78.74 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 83.82 78.74 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 83.82 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -867,12 +754,8 @@
 		(stroke (width 0) (type default)) (uuid "d93648a5-3c3f-424e-b1b4-0fa9808c81a7"))
 (label "CLK" (at 88.9 92.71 0)
 		(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "545ad7ce-8640-44ff-b7bf-0bf51013be3b"))
-(symbol (lib_id "power:GND") (at 83.82 100.33 0) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bafecf9a-1bb6-413a-8c04-51085f0e1a61")
-		(property "Reference" "#PWR113" (at 86.36 99.06 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 83.82 104.14 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 83.82 100.33 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 83.82 100.33 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 83.82 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "492c5d4a-5544-4243-9e3e-08e3ba9ca269"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR113") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR114") (unit 1))))
-	)
+(label "GND" (at 83.82 100.33 270)
+			(effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "b59caa47-5bf1-4631-9b29-bdedcaf8bd7d"))
 (symbol (lib_id "Device:R") (at 66.04 96.52 0) (unit 1)
 		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cd101856-605a-4a3d-8aac-b26404a889e5")
 		(property "Reference" "R39" (at 68.58 95.25 0) (effects (font (size 1.27 1.27)))) (property "Value" "10K" (at 68.58 97.79 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 66.04 96.52 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 66.04 96.52 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 66.04 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -883,12 +766,8 @@
 		(stroke (width 0) (type default)) (uuid "26326d8c-cbc3-4144-abb9-3dcc184c3343"))
 (label "MOSI" (at 71.12 92.71 0)
 		(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "55798d05-d6ad-4a2a-9b1b-573b9f1ad76e"))
-(symbol (lib_id "power:GND") (at 66.04 100.33 0) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d41b6b81-3311-44dd-8e93-03985e8b6917")
-		(property "Reference" "#PWR115" (at 68.58 99.06 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 66.04 104.14 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 66.04 100.33 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 66.04 100.33 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 66.04 100.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "a75925f3-0ccc-47d8-bdb4-3244d58a461c"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR115") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR116") (unit 1))))
-	)
+(label "GND" (at 66.04 100.33 270)
+			(effects (font (size 1.27 1.27)) (justify right bottom)) (uuid "e9fe43d7-f80b-4ca1-8077-957e4496c8b2"))
 (symbol (lib_id "Connector:Conn_01x04_Pin") (at 165.1 111.76 0) (unit 1)
 		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "99f92a1c-a7d2-4ebb-b1f6-9fa05e9136da")
 		(property "Reference" "J12" (at 165.1 106.68 0) (effects (font (size 1.27 1.27)))) (property "Value" "Encoder_Tab" (at 165.1 121.92 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "custom-lib:Encoder_Tab_1x04" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -917,13 +796,17 @@
 		(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "fc0c01be-7d52-422c-adeb-5a20ce6ef278"))
 (wire (pts (xy 170.18 116.84) (xy 175.26 116.84))
 		(stroke (width 0) (type default)) (uuid "ba742f70-0f91-4509-9081-0782dd46526b"))
-(symbol (lib_id "power:GND") (at 175.26 116.84 0) (unit 1)
-		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9108afe9-4f8f-47ae-b87c-55508718672f")
-		(property "Reference" "#PWR117" (at 177.8 115.57 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "GND" (at 175.26 120.65 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 175.26 116.84 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 175.26 116.84 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 175.26 116.84 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(pin "1" (uuid "4a0ec6e0-d5ba-46d4-9e5d-bbad9e41776c"))
-		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#PWR117") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#PWR118") (unit 1))))
+(label "GND" (at 175.26 116.84 0)
+			(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a00c0efe-7968-4312-b8ca-98f585ec186a"))
+	(wire (pts (xy 175.26 116.84) (xy 185.42 116.84))
+			(stroke (width 0) (type default)) (uuid "53dbffd2-ed24-44c8-9d63-e5bf11befe83"))
+	(symbol (lib_id "power:PWR_FLAG") (at 185.42 116.84 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0e5914ef-a6d5-48f0-be08-8f24afa81e48")
+		(property "Reference" "#FLG90" (at 187.96 115.57 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 185.42 113.03 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Footprint" "" (at 185.42 116.84 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 185.42 116.84 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "" (at 185.42 116.84 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "a29cf44d-d059-41af-bb9e-82954ea4d6d7"))
+		(instances (project "ratatron2" (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/036776a3-be1a-4c0c-b45b-706db5771e66" (reference "#FLG90") (unit 1)) (path "/2004f7a1-e0c1-4b75-9854-ea5122472558/95fdedc3-917d-4b8e-b815-e74af7ab3f5c" (reference "#FLG91") (unit 1))))
 	)
-(text "AS5147P-HTSM, not plain AS5147 (14.5 krpm).\nDefault ABI 1024 PPR: 4096 counts per rev, no programming.\nMagnet axis on the centre of the package.\nVDD, ENC_A and ENC_B reach J8/J9 through the tab solder: separate nets on purpose." (exclude_from_sim no) (at 76.2 60.96 0)
+(text "AS5147P-HTSM, not plain AS5147 (14.5 krpm).\nDefault ABI 1024 PPR: 4096 counts per rev, no programming.\nMagnet axis on the centre of the package.\nVDD, GND, ENC_A and ENC_B reach J8/J9 through the tab solder: separate nets on purpose." (exclude_from_sim no) (at 76.2 60.96 0)
 		(effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "59df361d-7a8d-463c-8ae3-00f889f712c7"))
 	(embedded_fonts no)
 )
