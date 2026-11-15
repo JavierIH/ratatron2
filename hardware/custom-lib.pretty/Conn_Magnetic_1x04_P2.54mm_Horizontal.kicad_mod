@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "Magnetic connector (AliExpress), 4 pos, P2.54mm, right angle, 2 magnets, on top of the board at the edge: body 18.26 x 4 x 4.2 mm, 0.4 mm above the board, mating face 0.2 mm past the edge. Dimensions from the 3D model (ratatron2_3d/conn.step). Board edge at y -5.3 (line on F.Fab)")
+	(descr "Magnetic connector (AliExpress), 4 pos, P2.54mm, right angle, 2 magnets, on top of the board at the edge: body 18.26 x 4 x 4.2 mm, 0.4 mm above the board, mating face 0.2 mm past the edge. Dimensions from the 3D model (mechanics/conn.step). Board edge at y -5.3 (line on F.Fab)")
 	(tags "magnetic connector right angle edge")
 	(property "Reference" "REF**"
 		(at 3.81 1.9 0)
