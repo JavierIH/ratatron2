@@ -1,3 +1,6 @@
 # FreeCAD backups
 *.FCStd1
 *.fcstd1
+
+# board STEP exports (notes/tools/pcb_step.py)
+mechanics/ratatron2-pcb*.step
