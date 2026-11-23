@@ -4,7 +4,6 @@
   (lib (name AO3401A)(type KiCad)(uri ${KIPRJMOD}/AO3401A.kicad_sym)(options "")(descr "AOS AO3401A P-MOSFET SOT-23"))
   (lib (name AO4409)(type KiCad)(uri ${KIPRJMOD}/AO4409.kicad_sym)(options "")(descr "AOS AO4409 P-MOSFET SO-8"))
   (lib (name LSM6DSRX)(type KiCad)(uri ${KIPRJMOD}/LSM6DSRX.kicad_sym)(options "")(descr "ST LSM6DSRX IMU"))
-  (lib (name MP6551)(type KiCad)(uri ${KIPRJMOD}/MP6551.kicad_sym)(options "")(descr "MPS MP6551 H-bridge"))
   (lib (name DRV8874)(type KiCad)(uri ${KIPRJMOD}/DRV8874.kicad_sym)(options "")(descr "TI DRV8874 H-bridge HTSSOP-16"))
   (lib (name MCP1755S)(type KiCad)(uri ${KIPRJMOD}/MCP1755S.kicad_sym)(options "")(descr "Microchip MCP1755S LDO SOT-223"))
   (lib (name MCP1755)(type KiCad)(uri ${KIPRJMOD}/MCP1755.kicad_sym)(options "")(descr "Microchip MCP1755 LDO SOT-23-5"))
