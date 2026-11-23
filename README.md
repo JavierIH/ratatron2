@@ -29,7 +29,7 @@
 | **IMU** | LSM6DSRX (gyro and accelerometer) over SPI |
 | **Drive** | 4 wheels, 2 motors, 2 DRV8874 H-bridges at 20 kHz with current sensing |
 | **Encoders** | 2 AS5147P, magnetic, on little boards that snap off the main one |
-| **Suction** | a fan over a hole in the middle of the board |
+| **Suction** | a fan driven by a coreless motor, over a hole in the middle of the board |
 | **Battery** | 2S LiPo |
 | **Interface** | 6 blue LEDs, 2 buttons and a power switch |
 | **Connectors** | SWD through a magnetic connector, serial on a header |
