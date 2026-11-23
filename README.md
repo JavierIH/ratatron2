@@ -42,8 +42,7 @@
 
 ## Family
 
-- [Ratatron](https://github.com/JavierIH/ratatron), the first one: an STM32F103 that already finds its way out of
-  mazes
+- [Ratatron](https://github.com/JavierIH/ratatron), the first one
 - [Ratasim](https://github.com/JavierIH/ratasim), the simulator
 
 ## Licence
